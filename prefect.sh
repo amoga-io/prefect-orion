@@ -35,8 +35,8 @@ function wait_until_postgres_ready() {
 
 
 function start_server() {
-    docker-compose up -d --force-recreate --no-deps postgres
-    wait_until_postgres_ready
+    #docker-compose up -d --force-recreate --no-deps postgres
+    #wait_until_postgres_ready
     sleep 1
     docker-compose up -d --force-recreate --no-deps prefect-server
     sleep 1
@@ -46,7 +46,7 @@ function start_server() {
 function initialize() {
     echo "Environment needs to be initialized...."
     rm -rf ${VOLUMES_FOLDER} && \
-        mkdir -p ${VOLUMES_FOLDER}/postgres && \
+       # mkdir -p ${VOLUMES_FOLDER}/postgres && \
         mkdir -p ${VOLUMES_FOLDER}/prefect > /dev/null 2>&1
     start_server
     sleep 1
@@ -75,7 +75,7 @@ function start() {
         start_server
         sleep 5
     fi
-    docker-compose up -d --force-recreate --no-deps minio prefect-agent
+    # docker-compose up -d --force-recreate --no-deps prefect-agent
     status
 }
 
