@@ -75,7 +75,7 @@ function start() {
         start_server
         sleep 5
     fi
-    # docker-compose up -d --force-recreate --no-deps prefect-agent
+    docker-compose up -d --force-recreate --no-deps prefect-agent
     status
 }
 
