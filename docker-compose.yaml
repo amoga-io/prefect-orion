@@ -56,7 +56,7 @@ services:
       # PREFECT_ORION_DATABASE_CONNECTION_URL: postgresql+asyncpg://user_prefect:Nr19*04E!*v8&A&rkWQ@10.5.0.4:5432/prefectdb
       PREFECT_ORION_ANALYTICS_ENABLED: "false"
       PREFECT_LOGGING_SERVER_LEVEL: WARNING
-      PREFECT_API_URL: http://localhost:4200/api
+      PREFECT_API_URL: http://prefect-server:4200/api
       # PREFECT_API_URL: https://automation.amoga.app/api
     networks:
       - prefect
@@ -75,6 +75,7 @@ services:
       prefect-server:
         condition: service_started
     environment:
+      PREFECT_API_URL: http://prefect-server:4200/api
       PREFECT_LOGGING_LEVEL: DEBUG
       PREFECT_AGENT_QUERY_INTERVAL: 30.0
       DOCKER_HOST: unix://var/run/docker.sock
