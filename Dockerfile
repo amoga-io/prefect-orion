@@ -8,4 +8,6 @@ RUN apt update && \
     pip install names==0.3.0 && \
     pip install gspread==5.9.0 && \
     pip install oauth2client==4.1.3 && \
-    pip install psycopg2-binary s3fs
+    pip install mysql-connector-python && \
+    pip install paramiko && \
+    pip install psycopg2-binary paramiko==3.3.1 mysql-connector-python==8.1.0
