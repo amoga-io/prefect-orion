@@ -35,9 +35,9 @@ function wait_until_postgres_ready() {
 
 
 function start_server() {
-    docker-compose up -d --force-recreate --no-deps postgres
-    wait_until_postgres_ready
-    sleep 1
+    # docker-compose up -d --force-recreate --no-deps postgres
+    # wait_until_postgres_ready
+    # sleep 1
     docker-compose up -d --force-recreate --no-deps prefect-server
     sleep 1
 }
