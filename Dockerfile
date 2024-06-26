@@ -10,4 +10,5 @@ RUN apt update && \
     pip install oauth2client==4.1.3 && \
     pip install mysql-connector-python && \
     pip install paramiko && \
+    pip install pypdf==4.2.0 && \
     pip install psycopg2-binary paramiko==3.3.1 mysql-connector-python==8.1.0
