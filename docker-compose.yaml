@@ -51,6 +51,10 @@ services:
       PREFECT_SERVER_API_HOST: 0.0.0.0
       # PREFECT_API_DATABASE_CONNECTION_URL: postgresql+asyncpg://prefect:test-password@postgres:5432/prefect_server
       PREFECT_API_DATABASE_CONNECTION_URL: postgresql+asyncpg://user_prefect:Nr19*04E!*v8&A&rkWQ@10.5.0.4:5432/prefectdb_nonprod
+      PREFECT_SQLALCHEMY_POOL_SIZE: 30
+      PREFECT_SQLALCHEMY_MAX_OVERFLOW: 10
+      PREFECT_API_DATABASE_CONNECTION_TIMEOUT: 15
+      PREFECT_API_DATABASE_TIMEOUT: 30
       PREFECT_ORION_ANALYTICS_ENABLED: "false"
       PREFECT_LOGGING_SERVER_LEVEL: WARNING
       PREFECT_API_URL: http://prefect-server:4200/api
